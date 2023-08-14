@@ -1,0 +1,10 @@
+.empty {
+    color: #00c875;
+}
+
+.todo-list {
+    /* Positioning */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
