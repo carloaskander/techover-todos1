@@ -11,4 +11,4 @@ const Item = ({ text, complete }) => {
 	);
 };
 
-export default Item;
+export default Item
