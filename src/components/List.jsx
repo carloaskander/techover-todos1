@@ -1,15 +1,18 @@
+import React from 'react';
 import Item from './Item';
 import './List.css';
+import MyLoader from './MyLoader';
 
 const List = ({ todos, complete, loading }) => {
 	if(loading) {
 		return (
 			<div className="todo-list">
-				{[1, 2, 3, 4, 5].map((todo, i) => (
-					<Item text={'Loading'} key={i} complete={complete} />
-				))}
+			  {/* Display shimmer effect loader 5 times */}
+			  {[...Array(5)].map((_, i) => (
+				<MyLoader key={i} />
+			  ))}
 			</div>
-		)
+		  );
 	}
 	
 	if (todos.length === 0) {
